@@ -1,0 +1,24 @@
+/** Una empresa de electrodomesticos quiere controlar los pagos quincenales por vendedor
+ el cual tiene su salario base quincenal. Adicional, se le otorga un 20% de las ventas que 
+ realice en la quincena (comisión). Cada pago se hace con cheque el cual contiene en total 
+ su salario mas la comision que se gano por sus ventas, menos el 10% del cálculo de la renta. 
+ Calcular cuanto se le paga al vendedor como salario final y cuanto recibe solo de comision.
+**/
+
+using System;
+class salario
+	{
+		static void Main (string[] args)
+		{
+			double salarioBase = 500.00;
+			double totalVentas = 600;
+			double comision = totalVentas * 0.20;
+			double pagoTotal = 0;
+			double valorRenta = pagoTotal - (pagoTotal * 0.10);
+
+			pagoTotal = salarioBase + comision - valorRenta;
+				Console.WriteLine("Su Salario Final es: " + pagoTotal);
+				Console.WriteLine("Total por comision: " + comision);
+		}
+
+	}
