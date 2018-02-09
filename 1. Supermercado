@@ -1,0 +1,18 @@
+/**Conociendo el gasto que un cliente realiza en un supermercado y la 
+cantidad de dinero con la que esta pagando, calcule y muestre el vuelto 
+**/
+
+using System;
+class gasto
+	{
+		static void Main (string[] args)
+		{
+			double totalProducto = 39.99;
+			double totalPago = 50.00;
+			double totalVuelto;
+
+			totalVuelto = totalPago - totalProducto;
+				Console.WriteLine("Su cambio es: " + totalVuelto);
+
+		}
+	}
