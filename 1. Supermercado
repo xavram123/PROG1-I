@@ -7,9 +7,15 @@ class gasto
 	{
 		static void Main (string[] args)
 		{
-			double totalProducto = 39.99;
-			double totalPago = 50.00;
-			double totalVuelto;
+			double totalVuelto = 0;
+			double totalProducto = 0;
+			double totalPago = 0;
+
+			Console.Write("Introduzca el valor del articulo a cancelar: ");
+			totalProducto = Convert.ToDouble(Console.ReadLine());
+
+			Console.Write("Introduzca el monto cancelado por el cliente: ");
+			totalPago = Convert.ToDouble(Console.ReadLine());
 
 			totalVuelto = totalPago - totalProducto;
 				Console.WriteLine("Su cambio es: " + totalVuelto);
