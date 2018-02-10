@@ -1,0 +1,23 @@
+/** Escriba un programa que reciba el peso de una carta en onzas 
+e imprima el costo del porte calculado segun la regla siguiente: 
+    1. La primera onza cuesta $0.25
+    2. Cada onza adicional cuesta $0.04                      **/
+
+using System;
+class peso{
+	static void Main(string[]args){
+		int peso=0;
+		double costo=0;
+		
+		Console.Write("Digite el peso de la carta en onzas: ");
+		peso=Convert.ToInt32(Console.ReadLine());
+		
+		if (peso > 0 && peso < 2){
+		Console.Write("Su costo por la carta es de: $0.25");
+		}
+		else {
+			costo=((peso - 1) * 0.4) + 0.25;
+			Console.Write("Su costo por la carta es: " + costo);
+		}
+	}
+}
