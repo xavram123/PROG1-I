@@ -10,15 +10,24 @@ class salario
 	{
 		static void Main (string[] args)
 		{
-			double salarioBase = 500.00;
-			double totalVentas = 600;
-			double comision = totalVentas * 0.20;
+			double salarioBase = 0;
+			double totalVentas = 0;
+			double comision = 0;
 			double pagoTotal = 0;
-			double valorRenta = pagoTotal - (pagoTotal * 0.10);
+			double valorRenta = 0;
 
-			pagoTotal = salarioBase + comision - valorRenta;
-				Console.WriteLine("Su Salario Final es: " + pagoTotal);
-				Console.WriteLine("Total por comision: " + comision);
+			Console.Write("Introduzca el salario base del trabajador: ");
+			salarioBase = Convert.ToDouble(Console.ReadLine());
+
+			Console.Write("Introduzca el total generado en ventas: ");
+			totalVentas = Convert.ToDouble(Console.ReadLine());
+
+			comision = totalVentas * 0.20;
+			valorRenta = salarioBase * 0.10;
+
+			pagoTotal = (salarioBase + comision) - valorRenta;
+				Console.WriteLine("Su salario final es de: " + pagoTotal);
+				Console.WriteLine("Total en concepto de comision: " + comision);
 		}
 
 	}
