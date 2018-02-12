@@ -1,0 +1,38 @@
+/** Un trabajador recibe su salario normal por las primeras 30 horas y se le paga 1 1/2 veces su pago
+de hora normal por cada hora después de las primeras 30. Escriba un programa que calcule e imprima el 
+pago al empleado basado en el sueldo normal y en el número de horas de trabajo, donde estos datos son 
+introducidos por el usuario. **/
+
+
+using System;
+class sueldo
+{
+    static void Main(string[]args){
+    double salnormal, salhora, salhoraextra, horasnormales, horasextra, horastrab;
+
+    Console.Write("Introduzca el salario normal a pagar al trabajador: ");
+    salnormal = Convert.ToDouble(Console.ReadLine());
+
+    Console.Write("Introduzca la cantidad de horas trabajadas: ");
+    horastrab = Convert.ToDouble(Console.ReadLine());
+
+    salhora = salnormal/30;
+    salhoraextra = horastrab * (salhora * 1.5);
+
+    if (horastrab > 30)
+    {
+        horasextra = salnormal + salhoraextra;
+        Console.WriteLine("Su total a pagar es de: " + horasextra + " en concepto de " + horastrab + " horas trabajadas.");
+    }
+    else
+    {
+        if (horastrab <= 30)
+        {
+            horasnormales = horastrab * salhora;
+            Console.WriteLine("Su total a pagar es de " + horasnormales + " en conceptop de " + horastrab + " horas trabajadas.");
+        }
+
+    }
+
+    }
+}
