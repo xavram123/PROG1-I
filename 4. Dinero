@@ -1,0 +1,39 @@
+/** Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras
+trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se
+consideran horas extras y que estas se pagan al doble de una hora normal cuando no exceden de
+8; si las horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se pagan las horas
+normales y el resto al triple. Imprimir cuanto recibirá el trabajador por las horas extras realizadas. **/
+
+using System;
+class dinero{
+	static void Main(string[]args){
+        double horastrab;
+        double horasextra, sueldototal, pagohora;
+
+        Console.Write("Introduzca el sueldo por hora del trabajador: ");
+        pagohora = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Introduzca el total de horas trabajadas: ");
+        horastrab = Convert.ToDouble(Console.ReadLine());
+
+        sueldototal = horastrab * pagohora;
+
+        if (horastrab > 40 && horastrab < 48)
+        {
+            horasextra = pagohora * 2;
+            sueldototal = sueldototal + horasextra;
+            Console.WriteLine("Sueldo en concepto de horas extras: " + horasextra);
+            Console.WriteLine("Total a pagar: " + sueldototal);
+        }
+        else
+        {
+            if (horastrab > 48)
+            {
+                horasextra = pagohora * 3;
+                sueldototal = sueldototal + horasextra;
+                Console.WriteLine("Sueldo en concepto de horas extras: " + horasextra);
+                Console.WriteLine("Total a pagar: " + sueldototal);
+            }
+        }
+    }
+}
