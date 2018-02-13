@@ -1,0 +1,34 @@
+using System;
+class uni
+{
+static void Main(string[] args)
+{
+	char Letra,caso;
+	int materias,total;
+	
+	Console.WriteLine("Digite una letra segun su caso para nuevo ingreso N y para antigui A:");
+	Letra=Convert.ToChar(Console.ReadLine());
+	caso=char.ToUpper(Letra);
+	switch(caso)
+	{
+		case 'A':
+	Console.Write("Numero de materias:");
+	materias=Convert.ToInt32(Console.ReadLine());
+	total=materias*15;
+	Console.WriteLine("Estudiante Antiguo Ingreso\n"+"Total a pagar por las materia es de:"+total+".00"+"\n"+"El numero materias a inscribir son:"+materias);
+	
+	break;
+	case 'N':
+	Console.Write("Numero de materias:");
+	materias=Convert.ToInt32(Console.ReadLine());
+	total=materias*20;
+	Console.WriteLine("Estudiante Nuevo Ingreso\n"+"Total a pagar por las materia es de:"+total+".00"+"\n"+"El numero materias a inscribir son:"+materias);
+	
+	break;
+	default:
+	Console.WriteLine("Opcion seleccionada no valida");
+	break;
+	
+	}
+}
+}
